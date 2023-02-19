@@ -129,3 +129,8 @@ export type VideoAttachmentSizeHandler = (
   element: HTMLElement,
   shouldGenerateVideoThumbnail: boolean,
 ) => VideoAttachmentConfiguration;
+
+export type Readable<T> = {
+  [key in keyof T]: T[key];
+  // eslint-disable-next-line @typescript-eslint/ban-types
+} & {};
