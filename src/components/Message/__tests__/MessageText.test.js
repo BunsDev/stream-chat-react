@@ -25,6 +25,7 @@ import {
 } from '../../../mock-builders';
 
 import { Attachment } from '../../Attachment';
+import { defaultReactionOptions } from '../../Reactions';
 import { Message } from '../Message';
 import { MessageOptions as MessageOptionsMock } from '../MessageOptions';
 import { MessageSimple } from '../MessageSimple';
@@ -84,6 +85,7 @@ async function renderMessageText(customProps, channelConfigOverrides = {}, rende
                 Emoji: EmojiComponentMock,
                 // eslint-disable-next-line react/display-name
                 Message: () => <MessageSimple channelConfig={channelConfig} />,
+                reactionOptions: defaultReactionOptions,
               }}
             >
               <EmojiProvider value={{ emojiConfig: emojiDataMock }}>
